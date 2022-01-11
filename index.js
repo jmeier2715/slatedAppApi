@@ -42,6 +42,8 @@ app.use('/auth', require('./controllers/auth')),
 app.use('/collection', require('./controllers/collection')),
 app.use('/translation', require('./controllers/translation'))
 
+//a route for every crud action
+
 
 
 // home route
