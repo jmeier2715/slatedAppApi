@@ -20,11 +20,11 @@ router.get ('/', isLoggedIn, (req, res, next)=>{
 
 //get one collection
 router.get('/:id', isLoggedIn, (req, res, next)=>{
-    db.collection.findByPk({
-        where: {collectionId: req.params.id}
+    db.collection.findOne({
+        where: {id: req.params.id}
     })
     .then(handle404)
-    .then((collection)=>res.status(200).json({ example: example.toObject() }))
+    .then((collection)=>res.status(200).json({ collection: collection.toObject() }))
     .catch(next)
 })
 
@@ -48,8 +48,8 @@ router.post('/', isLoggedIn, (req, res, next)=>{
 })    
 //delete a collection
 router.delete('/:id', isLoggedIn, (req, res)=>{
-    db.collection.findByPk({
-        where: {collectionId: req.params.id}
+    db.collection.findOne({
+        where: {id: req.params.id}
     })
     .then(handle404)
     .then((collection)=>{
