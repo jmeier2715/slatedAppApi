@@ -1,20 +1,23 @@
 {
   "development": {
     "database": "slated_development",
+    "username": "postgres",
+    "password": "password",
     "host": "127.0.0.1",
-    "dialect": "postgres",
-    "user": "postgres",
-    "password": "password"
+    "dialect": "postgres"
   },
   "test": {
     "database": "slated_test",
+    "username": "postgres",
+    "password": "password",
     "host": "127.0.0.1",
-    "dialect": "postgres",
-    "user": "postgres",
-    "password": "password"
+    "dialect": "postgres"
+    
   },
   "production": {
     "database": "express_auth_production",
+    "username": "postgres",
+    "password": "password",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
